@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AstraRead</title>
+<meta name="description" content="AstraRead: an EPUB, PDF and audiobook reader for Android with text-to-speech, an offline library and dark mode.">
+<link rel="icon" type="image/png" href="icon-192.png">
+<style>
+  :root {
+    --bg: #FAF6F0;
+    --surface: #FFFFFF;
+    --ink: #2C2523;
+    --muted: #5C534E;
+    --line: #E5DED4;
+    --accent: #8A5F18;
+    --on-accent: #FFF8EC;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #000000;
+      --surface: #141414;
+      --ink: #EDE6D6;
+      --muted: #A09B90;
+      --line: #24242B;
+      --accent: #E0B450;
+      --on-accent: #241A08;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main {
+    width: 100%;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+  }
+  .icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 6px 20px rgba(44, 37, 35, 0.18);
+  }
+  h1 {
+    margin: 0;
+    font: 600 2.75rem/1.1 Georgia, "Times New Roman", serif;
+    letter-spacing: -0.01em;
+  }
+  .tagline {
+    margin: -12px 0 0;
+    color: var(--muted);
+    font-size: 1.05rem;
+    text-wrap: balance;
+  }
+  .play {
+    display: inline-block;
+    padding: 14px 28px;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--on-accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .play:hover, .play:focus-visible { filter: brightness(1.08); }
+  .points {
+    margin: 8px 0 0;
+    padding: 20px 24px;
+    list-style: none;
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    text-align: left;
+    display: grid;
+    gap: 10px;
+  }
+  .points li::before {
+    content: "\2726";
+    color: var(--accent);
+    margin-right: 10px;
+  }
+  footer {
+    margin-top: 40px;
+    color: var(--muted);
+    font-size: 0.9rem;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon-192.png" alt="" width="96" height="96">
+  <h1>AstraRead</h1>
+  <p class="tagline">EPUB, PDF and audiobook reader with text-to-speech, an offline library and dark mode.</p>
+  <a class="play" href="https://play.google.com/store/apps/details?id=com.astraread.app">Install from Google Play</a>
+  <ul class="points">
+    <li>Every format you own: EPUB, PDF, MOBI, comics, audiobooks and web novels.</li>
+    <li>Read-aloud with the voices on your phone, online voices or on-device voice packs.</li>
+    <li>No account and no analytics SDK. Your library stays on your device.</li>
+  </ul>
+</main>
+<footer>
+  <a href="https://sites.google.com/view/astraread-privacy-policy/home">Privacy policy</a>
+  <span>AstraRead for Android</span>
+</footer>
+</body>
+</html>
